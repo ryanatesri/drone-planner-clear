@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Clearing the planner map…</title>
+  <style>
+    html, body { height: 100%; margin: 0; }
+    body { display: grid; place-items: center; background: #151515; color: #e6e6e6; font: 16px/1.5 "Avenir Next", "Segoe UI", sans-serif; }
+    main { max-width: 32rem; padding: 2rem; text-align: center; }
+    h1 { font-size: 1.25rem; font-weight: 600; margin: 0 0 .5rem; }
+    #status { color: #bdbdbd; }
+    #status.error { color: #ff8a80; }
+    a { color: #00a0ff; }
+    .spin { width: 2rem; height: 2rem; margin: 0 auto 1rem; border: 3px solid #333; border-top-color: #00a0ff; border-radius: 50%; animation: s 1s linear infinite; }
+    .done .spin { display: none; }
+    @keyframes s { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <main id="main">
+    <div class="spin" aria-hidden="true"></div>
+    <h1>Starting the planner over</h1>
+    <p id="status" role="status">Signing in with your ArcGIS account…</p>
+    <p id="back" hidden><a href="#">Back to the planner</a></p>
+  </main>
+  <script type="module" src="./clear.js"></script>
+</body>
+</html>
